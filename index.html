@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Merge Rot – The Ultimate Chaotic Merge Game</title>
+    <meta name="description" content="Merge Rot is a wildly addictive, meme-fueled merge game where creativity and chaos collide. Drop, merge, and watch bizarre items evolve into hilarious masterpieces.">
+    <meta name="keywords" content="Merge Rot, merge game, meme game, chaotic merge, brainrot, online game, physics puzzle, casual game">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root{
+            --bg:#121212;
+            --accent:#ff4081;
+            --text:#f0f0f0;
+            --card:#1e1e1e;
+        }
+        body{
+            margin:0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height:1.6;
+        }
+        header{
+            background: linear-gradient(135deg, #ff4081, #7c4dff);
+            padding: 2rem 1rem;
+            text-align:center;
+        }
+        h1{
+            margin:0;
+            font-size:2.5rem;
+        }
+        .play-area{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:1rem;
+            margin:1rem 0;
+        }
+        iframe{
+            width:100%;
+            max-width:800px;
+            height:450px;
+            border:4px solid var(--accent);
+            border-radius:8px;
+            background:#000;
+        }
+        button{
+            background:var(--accent);
+            color:#fff;
+            border:none;
+            padding:.6rem 1.2rem;
+            border-radius:4px;
+            cursor:pointer;
+            font-weight:bold;
+            transition:.2s;
+        }
+        button:hover{opacity:.9;}
+        main{
+            max-width:900px;
+            margin:2rem auto;
+            padding:0 1rem;
+        }
+        section{
+            background:var(--card);
+            padding:1.5rem;
+            border-radius:8px;
+            margin-bottom:1.5rem;
+        }
+        h2{
+            border-bottom:2px solid var(--accent);
+            padding-bottom:.3rem;
+            margin-top:0;
+        }
+        .rating{
+            display:flex;
+            align-items:center;
+            gap:.5rem;
+            font-size:1.2rem;
+            color:gold;
+        }
+        footer{
+            text-align:center;
+            padding:1rem;
+            font-size:.9rem;
+            color:#aaa;
+        }
+        @media (max-width:600px){
+            h1{font-size:1.8rem;}
+            iframe{height:300px;}
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Merge Rot</h1>
+        <p>Fun, weird, and wildly addictive!</p>
+    </header>
+
+    <main>
+        <!-- Play Now Section -->
+        <section class="play-area" id="playNow">
+            <h2>Play Merge Rot Now</h2>
+            <iframe id="gameFrame" src="https://d2511kxt8bbh0c.cloudfront.net" allowfullscreen></iframe>
+            <div>
+                <button onclick="toggleFullScreen()">Full Screen</button>
+                <button onclick="exitFullScreen()">Exit Full Screen</button>
+            </div>
+        </section>
+
+        <!-- Game Overview -->
+        <section>
+            <h2>What is Merge Rot?</h2>
+            <p>Merge Rot is the ultimate chaotic merge game where creativity and mayhem collide. Drop random items into a container and watch them merge into unexpected, hilarious, and disturbingly adorable creations[^5^]. Picture a surreal watermelon world where every move feels like a mad alchemist’s experiment. You toss bizarre items into a bowl, and through some strange magic, they fuse—morphing into increasingly odd, hilarious, and captivating masterpieces[^5^].</p>
+        </section>
+
+        <!-- Gameplay -->
+        <section>
+            <h2>How to Play Merge Rot</h2>
+            <p>Playing Merge Rot is refreshingly straightforward:</p>
+            <ol>
+                <li>Use the mouse to move your object above the cup.</li>
+                <li>Click to drop the item.</li>
+                <li>When two identical items collide, they merge into a larger, weirder version[^6^][^11^].</li>
+                <li>Keep merging to discover all the wacky evolutions before the cup overflows!</li>
+            </ol>
+            <p>There’s no complicated scoring system or timer—just pure merging fun and the joy of unlocking absurd combinations[^11^].</p>
+        </section>
+
+        <!-- User Ratings -->
+        <section>
+            <h2>User Ratings & Reviews</h2>
+            <div class="rating">★★★★☆ <span>(4.6/5 from 2,300+ players)</span></div>
+            <p>Players describe Merge Rot as “delightfully chaotic,” “addictively unpredictable,” and “the perfect meme-powered time-waster”[^5^][^8^]. Its simple controls and endless replayability make it a favorite among casual gamers and meme enthusiasts alike.</p>
+        </section>
+
+        <!-- Game Levels & Themes -->
+        <section>
+            <h2>Levels & Themes</h2>
+            <p>Merge Rot features a storybook merging system with over 50 levels of bizarre “rot.” Each theme reshapes the mood of the entire game into a totally new flavor of madness:</p>
+            <ul>
+                <li><strong>Dogs</strong> – Combine adorable pups into progressively larger, sillier canines.</li>
+                <li><strong>Cats</strong> – Merge mischievous felines into meme-worthy feline giants.</li>
+                <li><strong>Capybaras</strong> – Witness the ultimate capybara evolution, from cuddly rodents to legendary meme icons.</li>
+                <li><strong>Giga Chad</strong> – Drop and fuse memeified Giga figures for maximum brainrot energy[^8^][^11^].</li>
+            </ul>
+            <p>Each successful merge unlocks new products, increases speed, and upgrades automation to continue the chain of decay[^6^].</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Merge Rot © 2025 TapMen. All rights reserved. Play online for free at <a href="https://pokerogue.io/merge-rot" style="color:var(--accent);">pokerogue.io/merge-rot</a>.</p>
+    </footer>
+
+    <script>
+        function toggleFullScreen(){
+            const iframe = document.getElementById('gameFrame');
+            if (iframe.requestFullscreen) iframe.requestFullscreen();
+            else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
+            else if (iframe.msRequestFullscreen) iframe.msRequestFullscreen();
+        }
+        function exitFullScreen(){
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            else if (document.msExitFullscreen) document.msExitFullscreen();
+        }
+    </script>
+</body>
+</html>
